@@ -1,0 +1,95 @@
+Vou criar duas árvores binárias de busca (BST) com as listas fornecidas, adicionar um valor a cada uma delas e, em pelo menos uma das árvores, realizar a remoção de um nó com dois filhos.
+
+Primeiro, vou criar as árvores binárias de busca com as listas:
+
+Para a `Lista1`:
+
+```
+          45
+         /  \
+       20    60
+      / \     \
+     7   30   81
+        /     / \
+       8     97 100
+                /
+               4
+```
+
+Agora, para a `Lista2`:
+
+```
+          15
+         /  \
+        6   18
+       /   /  \
+      3   16  20
+              /
+             7
+```
+
+Agora, vou adicionar um valor a cada árvore e, em uma delas, vou realizar a remoção de um nó com dois filhos.
+
+Para a `Lista1`:
+
+- Adicionando o valor 50:
+
+```
+          45
+         /  \
+       20    60
+      / \     \
+     7   30   81
+        /     / \
+       8     97 100
+                /
+               4
+                 \
+                 50
+```
+
+- Removendo o nó 60 (um nó com dois filhos). O nó 60 será substituído pelo nó 50, que é o sucessor in-order:
+
+```
+          45
+         /  \
+       20    50
+      / \     \
+     7   30   81
+        /        \
+       8        97
+                / \
+               4  100
+```
+
+Para a `Lista2`:
+
+- Adicionando o valor 10:
+
+```
+          15
+         /  \
+        6   18
+       /   /  \
+      3   16  20
+              /
+             7
+            /
+           10
+```
+
+- Removendo o nó 15 (um nó com dois filhos). O nó 15 será substituído pelo nó 16, que é o sucessor in-order:
+
+```
+          16
+         /  \
+        6   18
+       /     \
+      3       20
+              /
+             7
+            /
+           10
+```
+
+Assim, adicionamos um valor a cada árvore e removemos um nó com dois filhos na `Lista1`, onde o nó 60 foi substituído pelo nó 50. Na `Lista2`, adicionamos o valor 10 e removemos o nó 15, substituindo-o pelo nó 16.
