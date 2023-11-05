@@ -1,0 +1,20 @@
+import random
+
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and key < arr[j]:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
+
+# Gerar um vetor de tamanho 30 com números ímpares em ordem crescente
+tamanho = 30
+vetor = [random.randint(1, 100) * 2 + 1 for _ in range(tamanho)]
+
+# Ordenar o vetor usando Insertion Sort
+insertion_sort(vetor)
+
+# Exibir o vetor ordenado
+print("Vetor ordenado:", vetor)
