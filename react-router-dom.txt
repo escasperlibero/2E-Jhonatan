@@ -1,0 +1,86 @@
+
+### Passo 1: Instalar o `react-router-dom`
+
+Certifique-se de que você já tenha o `react-router-dom` instalado. Se ainda não tiver, você pode instalá-lo usando o seguinte comando:
+
+```bash
+npm install react-router-dom
+```
+
+### Passo 2: Criar componentes para cada tela
+
+Dentro do diretório `src`, crie dois componentes para representar duas telas diferentes. Por exemplo, `TelaInicial.js` e `TelaSecundaria.js`:
+
+```jsx
+// src/TelaInicial.js
+import React from 'react';
+
+const TelaInicial = () => {
+  return (
+    <div>
+      <h2>Tela Inicial</h2>
+      <p>Bem-vindo à tela inicial!</p>
+    </div>
+  );
+}
+
+export default TelaInicial;
+```
+
+```jsx
+// src/TelaSecundaria.js
+import React from 'react';
+
+const TelaSecundaria = () => {
+  return (
+    <div>
+      <h2>Tela Secundária</h2>
+      <p>Esta é a tela secundária.</p>
+    </div>
+  );
+}
+
+export default TelaSecundaria;
+```
+
+### Passo 3: Configurar o roteamento no componente principal
+
+Modifique o componente principal, por exemplo, `App.js`, para incluir o roteamento entre as telas:
+
+```jsx
+// src/App.js
+import React from 'react';
+import './App.css';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import TelaInicial from './TelaInicial';
+import TelaSecundaria from './TelaSecundaria';
+
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <h1>Minha Aplicação React com Roteamento</h1>
+          <nav>
+            <ul>
+              <li><Link to="/">Tela Inicial</Link></li>
+              <li><Link to="/tela-secundaria">Tela Secundária</Link></li>
+            </ul>
+          </nav>
+        </header>
+
+        <Route path="/" exact component={TelaInicial} />
+        <Route path="/tela-secundaria" component={TelaSecundaria} />
+      </div>
+    </Router>
+  );
+}
+
+export default App;
+```
+
+### Passo 4: Resultado
+
+Agora, ao acessar `http://localhost:3000/`, você verá links para a Tela Inicial e a Tela Secundária. Ao clicar neles, o roteador navegará entre as telas correspondentes.
+
+Lembre-se de salvar os arquivos e anexar o código modificado ao enviar a atividade.
