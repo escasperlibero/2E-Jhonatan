@@ -1,0 +1,72 @@
+
+**HTML (index.html):**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Flexbox Playground</title>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+    </div>
+</body>
+</html>
+```
+
+**CSS (styles.css):**
+
+```css
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid #333;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.flex-item {
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.flex-item:hover {
+    background-color: #0056b3;
+}
+```
+
+Neste exemplo:
+
+- A `<div class="flex-container">` envolve os itens que serão movimentados usando o Flexbox.
+- Os itens são as `<div>` com a classe `flex-item`.
+- O CSS define um layout flexível para o contêiner principal (`flex-container`) e configurações básicas para os itens flexíveis (`flex-item`).
+- A propriedade `hover` é utilizada para aplicar uma transição de cor quando o mouse está sobre um item.
+
+Para experimentar e realizar movimentações, você pode abrir o arquivo `index.html` em um navegador. Isso proporcionará uma experiência interativa ao visualizar o comportamento do Flexbox.
