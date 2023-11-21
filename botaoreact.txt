@@ -1,0 +1,58 @@
+
+### Passo 1: Modificar o componente
+
+Dentro do componente em que deseja adicionar o botão, importe o `useState` do React e adicione o código do botão:
+
+```jsx
+// src/SeuComponente.js (substitua pelo nome do seu componente)
+import React, { useState } from 'react';
+
+const SeuComponente = () => {
+  // Definir o estado inicial do contador
+  const [contador, setContador] = useState(0);
+
+  // Função para aumentar o contador
+  const aumentarContador = () => {
+    setContador(contador + 1);
+  };
+
+  return (
+    <div>
+      <h2>Contador: {contador}</h2>
+      <button onClick={aumentarContador}>Aumentar</button>
+    </div>
+  );
+}
+
+export default SeuComponente;
+```
+
+### Passo 2: Utilizar o novo componente no `App.js`
+
+Agora, modifique o arquivo `src/App.js` (ou qualquer componente que você esteja utilizando) para incluir o novo componente `SeuComponente`:
+
+```jsx
+// src/App.js
+import React from 'react';
+import './App.css';
+import SeuComponente from './SeuComponente'; // Importa o componente SeuComponente
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Minha Aplicação React</h1>
+        <SeuComponente /> {/* Utiliza o componente SeuComponente */}
+      </header>
+    </div>
+  );
+}
+
+export default App;
+```
+
+### Passo 3: Resultado
+
+Agora, ao acessar `http://localhost:3000/`, você verá um contador que pode ser aumentado clicando no botão "Aumentar".
+
+Lembre-se de salvar os arquivos e anexar o código modificado ao enviar a atividade.
