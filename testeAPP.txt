@@ -1,0 +1,38 @@
+
+```jsx
+// src/utils/mensagem.js
+const obterMensagem = () => {
+  return "Bem-vindo à minha aplicação React!";
+}
+
+export default obterMensagem;
+```
+
+Este arquivo `mensagem.js` contém uma função `obterMensagem` que retorna uma mensagem.
+
+Agora, vamos modificar o arquivo `src/App.js` para importar e usar essa função. Aqui está o código modificado:
+
+```jsx
+// src/App.js
+import React from 'react';
+import './App.css';
+import obterMensagem from './utils/mensagem'; // Importa a função do arquivo mensagem.js
+
+function App() {
+  const meuNome = "Seu Nome"; // Substitua "Seu Nome" pelo seu nome
+  const mensagem = obterMensagem(); // Chama a função para obter a mensagem
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Meu Nome é {meuNome}</h1>
+        <p>{mensagem}</p> {/* Exibe a mensagem obtida da função */}
+      </header>
+    </div>
+  );
+}
+
+export default App;
+```
+
+Certifique-se de substituir `"Seu Nome"` pelo seu nome real. Agora, ao acessar `http://localhost:3000/`, você verá uma mensagem de boas-vindas proveniente da função que importamos.
