@@ -1,0 +1,75 @@
+
+1. **Metadados (`<head>` e `<meta>`):**
+   
+   ```html
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="description" content="Exemplo de utilização de metadados em HTML">
+       <meta name="keywords" content="HTML, metadados, exemplo">
+       <title>Exemplo de Metadados</title>
+   </head>
+   <body>
+       <!-- Conteúdo da página -->
+   </body>
+   </html>
+   ```
+
+2. **Separação de Conteúdo (`<div>`):**
+
+   ```html
+   <div id="header">
+       <h1>Meu Site</h1>
+       <p>Bem-vindo ao meu site!</p>
+   </div>
+   <div id="main-content">
+       <p>Este é o conteúdo principal do site.</p>
+   </div>
+   <div id="footer">
+       <p>Rodapé do site.</p>
+   </div>
+   ```
+
+3. **Texto (`<p>` e `<h1>`):**
+
+   ```html
+   <h1>Título Principal</h1>
+   <p>Este é um parágrafo de texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+   <h1>Outro Título</h1>
+   <p>Mais um parágrafo para exemplificar.</p>
+   ```
+
+4. **Imagem (`<img>`):**
+
+   ```html
+   <img src="caminho/para/imagem.jpg" alt="Descrição da Imagem">
+   <p>Imagem de um lindo pôr do sol.</p>
+   <img src="caminho/para/outra-imagem.png" alt="Descrição da Outra Imagem">
+   <p>Uma imagem de exemplo.</p>
+   ```
+
+5. **Formulário (`<form>`, `<input>`, `<textarea>`, `<select>`):**
+
+   ```html
+   <form action="/processar-formulario" method="post">
+       <label for="nome">Nome:</label>
+       <input type="text" id="nome" name="nome" required>
+
+       <label for="email">Email:</label>
+       <input type="email" id="email" name="email" required>
+
+       <label for="mensagem">Mensagem:</label>
+       <textarea id="mensagem" name="mensagem" rows="4" cols="50" required></textarea>
+
+       <label for="cidade">Cidade:</label>
+       <select id="cidade" name="cidade">
+           <option value="sp">São Paulo</option>
+           <option value="rj">Rio de Janeiro</option>
+           <option value="bh">Belo Horizonte</option>
+       </select>
+
+       <input type="submit" value="Enviar">
+   </form>
+   ```
+
