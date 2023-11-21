@@ -1,0 +1,54 @@
+
+### Passo 1: Criar um novo componente
+
+Dentro do diretório `src`, crie um novo arquivo chamado `Saudacao.js`:
+
+```jsx
+// src/Saudacao.js
+import React from 'react';
+
+const Saudacao = (props) => {
+  return (
+    <div>
+      <h2>Olá, {props.nome}!</h2>
+      <p>Bem-vindo à minha aplicação React.</p>
+    </div>
+  );
+}
+
+export default Saudacao;
+```
+
+Este componente `Saudacao` recebe uma propriedade `nome` e a utiliza para exibir uma saudação personalizada.
+
+### Passo 2: Utilizar o novo componente no `App.js`
+
+Agora, modifique o arquivo `src/App.js` para utilizar o componente `Saudacao`:
+
+```jsx
+// src/App.js
+import React from 'react';
+import './App.css';
+import Saudacao from './Saudacao'; // Importa o componente Saudacao
+
+function App() {
+  const meuNome = "Seu Nome"; // Substitua "Seu Nome" pelo seu nome real
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Minha Aplicação React</h1>
+        <Saudacao nome={meuNome} /> {/* Utiliza o componente Saudacao e passa o nome como prop */}
+      </header>
+    </div>
+  );
+}
+
+export default App;
+```
+
+### Passo 3: Resultado
+
+Agora, ao acessar `http://localhost:3000/`, você verá uma saudação personalizada com o seu nome, usando o componente `Saudacao` e passando o nome como propriedade.
+
+Lembre-se de salvar os arquivos e anexar o código modificado ao enviar a atividade.
